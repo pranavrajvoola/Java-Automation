@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="Pranavraj.testcomponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Error Validations Test(failed)" verbose="0">
+    <classes>
+      <class name="Pranavraj.Test.ErrorValidationLoginTest">
+        <methods>
+          <include name="quit"/>
+          <include name="launchingApplication"/>
+          <include name="loginErrorValidation"/>
+        </methods>
+      </class> <!-- Pranavraj.Test.ErrorValidationLoginTest -->
+    </classes>
+  </test> <!-- Error Validations Test(failed) -->
+  <test thread-count="5" parallel="tests" name="Submit Order Test(failed)" verbose="0">
+    <classes>
+      <class name="Pranavraj.Test.submitorderTest">
+        <methods>
+          <include name="quit"/>
+          <include name="submitorder" invocation-numbers="1"/>
+          <include name="OrderTest"/>
+          <include name="launchingApplication"/>
+        </methods>
+      </class> <!-- Pranavraj.Test.submitorderTest -->
+    </classes>
+  </test> <!-- Submit Order Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
